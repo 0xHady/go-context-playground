@@ -104,9 +104,9 @@ func startServerA(port string, serverBAddress string) {
 }
 
 func main() {
-	serverBPort := ":8081"
-	serverAPort := ":8080"
-	serverBAddress := "localhost:8081"
+	serverBPort := ":50056"
+	serverAPort := ":50055"
+	serverBAddress := "localhost:50056"
 	
 	// Start Server B
 	startServerB(serverBPort)
