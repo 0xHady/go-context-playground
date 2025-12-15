@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package contextdemo;
+
+option go_package = "./contextdemo";
+
+message ContextRequest {
+  string payload = 1;
+}
+
+message ContextResponse {
+  string message = 1;
+}
+
+service ServerB {
+  rpc Process(ContextRequest) returns (ContextResponse);
+}
+
+service ServerA {
+  rpc Handle(ContextRequest) returns (ContextResponse);
+}
+
